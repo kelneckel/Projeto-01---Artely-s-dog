@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Artely</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagens\pets.ico">
+    <meta name="description" content="Informações sobre os nossos cachorros">
+    <meta name="keywords" content="HTML, desenvolvimento web, cachorros">
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>ARTELY'S DOG</h1>
+    </div>
+
+    <!-- Container principal com os cães -->
+    <div class="newcontainer">
+        <!-- coluna 1-->
+        <div class="column">
+            <img src="imagens/IMG_01.jpg" alt="Thor fotografia">
+            <h3>Thor</h3>
+
+             <div class="details">
+                <button onclick="window.location.href='dog01.html'" class="btn-circle">
+                    <i class="fa-solid fa-plus"></i> 
+                </button>
+            </div>       
+            <div class="conteudo"></div>    
+        </div>
+    <!-- coluna 2-->
+        <div class="column">
+            <img src="imagens/IMG_02.jpg" alt="Sid fotografia">
+            <h3>Sidnelson</h3>
+
+             <div class="details">
+                <button onclick="window.location.href='dog02.html'" class="btn-circle">
+                    <i class="fa-solid fa-plus"></i> 
+                </button>
+            </div>    
+            <div class="conteudo"></div>
+        </div>
+    <!-- coluna 3-->
+        <div class="column">
+            <img src="imagens/IMG_03.jpg" alt="Margareth fotografia">
+            <h3>Margareth</h3>
+
+            <div class="details">
+                <button onclick="window.location.href='dog03.html'" class="btn-circle">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>    
+        <div class="conteudo"></div>
+    </div>
+    <!-- coluna nova-->
+        <div class="form_column">
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="image" accept="image/*" multiple>
+
+            </form>
+            
+            <input id="form_name" class="dog-name" type="text" placeholder="Nome do cachorro novo">
+            <textarea id="form_description" class="dog-name" placeholder="Descrição (um item por linha)"></textarea>
+            <div class="form_buttons">
+                <button type="button" class="button-primary">Adicionar</button>
+                <button type="button" class="clearPage" onclick="limparLocalStorage()">Limpar</button>
+            </div>
+        </div>
+
+    </div>  
+    <!-- Rodapé -->
+    <div class="rodape_01">
+        <footer>
+            <p>&copy; 2025 Kely Donato Neckel. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/b9310aabf4.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>    
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* Reset básico e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+/* Corpo da página */
+body {
+    min-height: 100vh;
+    background: rgba(143, 188, 143, 0.6);
+    overflow: auto;
+}
+
+/* Container do título */
+.container {
+    background-color: rgba(85, 107, 47, 0.8);
+    padding: 20px;
+}
+
+/* Container dos cards */
+.newcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px;
+    flex: 1;
+}
+
+/* Cada card */
+.column {
+    flex: 0 0 200px;   
+    height: 400px;
+    text-align: center;
+    background-color: rgba(85, 107, 47, 0.8);
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 20px;
+    float: inline-start;
+    border: 1px solid #ccc;
+}
+
+/* Imagens dos cães */
+.column img {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 20%;
+    padding-top: 20%
+}
+
+/* Detalhes do card */
+.details summary {
+    list-style-type: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: center;
+}
+
+/* Ícone dentro do summary */
+.details summary i {
+    margin-right: 5px;
+    display: center;
+}
+
+/* Formulário para adicionar novo cão */
+.form_column {
+    flex: 0 0 200px;   
+    height: 400px;
+    text-align: center;
+    background-color: rgba(85, 107, 47, 0.8);
+    border-radius: 15px;
+    align-items: center;
+    justify-content:center;
+    padding-top: 20px;
+    float: inline-start;
+}
+
+.form_column img {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 20px;
+    padding-top: 20%
+}
+
+.form_column input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-top: 20px;
+}
+
+#form_description {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-top: 20px;    
+}
+
+.form_buttons .button-primary {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #556b2f;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.form_buttons .clearPage {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #556b2f;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.form_buttons .button-primary:hover{
+    background-color: #6b8e23;
+} 
+
+.form_buttons .clearPage:hover {
+    background-color: #6b8e23;
+}
+
+/* alterar form img*/
+#uploadForm {
+    font-size: 24px;
+    align-items: center ; 
+    margin-top: 50px;
+}
+
+#fileInput {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.details .btn-circle {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #556b2f;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.details .btn-circle:hover {
+    background-color: #6b8e23; /* cor mais escura no hover */
+    transform: scale(1); /* aumenta um pouco */
+}
+
+.dog-photo {
+    width: 70%;
+    height: 60%;
+    margin-top: 20%;
+    padding-top: 20%
+}
+
+.dog-column {
+    flex: 0 0 200px;   
+    height: 400px;
+    text-align: center;
+    background-color: rgba(85, 107, 47, 0.8);
+    border-radius: 15px;
+    align-items: center;
+    padding-top: 20px;
+    float: inline-start;
+    border: 1px solid #ccc;
+}
+
+.column-details{
+    float:right;
+    background-color: rgba(85, 107, 47, 0.8);
+    height: 400px;
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 150px;
+    margin-top: 40px;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: rgba(85, 107, 47, 0.8);
+    font-size: 12px;
+    padding: 10px 0;
+    margin-top: 137px;
+    color: white;
+}
+
+.rodape_01 {
+    background-color: rgba(85, 107, 47, 0.8);
+    font-size: 12px;
+    padding: 10px 0;
+    margin-top: 264px;
+    color: white;
+}
+footer {
+    text-align: center;
+}
+
+.dogs-details {
+    font-size: 15px;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    line-height: 2;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.button-back {
+    font-size: 15px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #556b2f;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.button-back:hover {
+    background-color: #6b8e23; /* cor mais escura no hover */
+    transform: scale(1.05); /* aumenta um pouco */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Cachorro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="nome"></h1>
+  </div>
+
+  <!-- Fotos + Descrição ficam juntos -->
+  <div id="fotos" class="newcontainer"></div>
+
+  <script>
+    // Recupera os cachorros salvos
+    const cachorros = JSON.parse(localStorage.getItem("cachorros")) || [];
+
+    // Recupera qual cachorro foi selecionado
+    const i = localStorage.getItem("cachorroSelecionado");
+    const cachorro = cachorros[i];
+
+    // Se não existir cachorro, volta para index.html
+    if (!cachorro) {
+      window.location.href = "index.html";
+    }
+
+    // Preenche título
+    document.getElementById("nome").innerText = cachorro.nome;
+
+    // Cria dinamicamente as fotos (até 3)
+    const containerFotos = document.getElementById("fotos");
+    cachorro.fotos.forEach(foto => {
+      const col = document.createElement("div");
+      col.classList.add("column");
+      col.innerHTML = `<img src="${foto}" alt="Foto de ${cachorro.nome}" class="dog-photo">`;
+      containerFotos.appendChild(col);
+  });
+
+  // 🔹 Coluna de descrição + botão Back döentro dela
+  const descricaoCol = document.createElement("div");
+  descricaoCol.classList.add("column");
+
+  descricaoCol.innerHTML = `
+    <ul id="descricao" class="dogs-details"></ul>
+  `;
+  containerFotos.appendChild(descricaoCol);
+
+  // Popula a lista
+  const descricaoContainer = descricaoCol.querySelector("#descricao");
+  const descricaoArray = Array.isArray(cachorro.descricao)
+    ? cachorro.descricao
+    : cachorro.descricao.split(";");
+
+  descricaoArray.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item.trim();
+    descricaoContainer.appendChild(li);
+  });
+
+  // 🔹 Botão Back dentro do mesmo newcontainer (mas não é .column!)
+  const backDiv = document.createElement("div");
+  backDiv.innerHTML = `
+    <button class="button-back">Back</button>
+  `;
+  containerFotos.appendChild(backDiv);
+
+    // Função voltar
+  function voltar() {
+    window.location.href = "index.html";
+  }
+
+  // Ativa botão voltar
+  document.querySelector(".button-back").addEventListener("click", voltar);
+
+  </script>
+</body>
+</html>
